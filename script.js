@@ -9,7 +9,7 @@ function checkPassword() {
     message.innerText = "我就知道我家小毛最最最聪明啦！";
 
     setTimeout(() => {
-      window.location.href = "https://codepen.io/mrjrnjiu-the-selector/full/myrqERx";
+      window.location.href = "bayes/index.html";
     }, 1500);
   } else {
     message.style.color = "salmon";
