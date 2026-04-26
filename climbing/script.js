@@ -12,7 +12,7 @@ function checkPassword() {
     result.style.color = "#81C784";
    
     setTimeout(function() {
-      window.location.href = "https://codepen.io/你的用户名/pen/你的作品ID"; 
+      window.location.href = "../ending/index.html"; 
     }, 800);
   } else {
     result.textContent = "再想想吧";
