@@ -1,24 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>End</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 这里是你刚才的 CSS */
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(10,10,30,0.7), rgba(20,20,40,0.95)),
+                url("https://images.unsplash.com/photo-1606125784258-570fc63c22c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzcyMDU3Mjh8&ixlib=rb-4.1.0&q=85");
+            background-size: cover;
+            background-position: center;
+        }
 
-  </head>
-    
-  <body>
-  <div class="overlay">
-  <div class="content">
-    <p class="line title">May the Fourth be with you ✨</p>
-    <p class="line">And may we always find each other,</p>
-    <p class="line">in every universe.</p>
-    <p class="line highlight">谢谢你陪我走到这，小毛就是我的整个宇宙呀 ❤️</p>
-  </div>
-</div>
-    <script  src="script.js"></script>
+        .overlay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
-  </body>
-  
+        .content {
+            background: rgba(0, 0, 0, 0.45);
+            padding: 40px; /* 稍微缩小一点适配手机 */
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            width: 80%; /* 适配手机 */
+            max-width: 500px;
+        }
+
+        .line {
+            opacity: 0;
+            transform: translateY(20px);
+            margin: 15px 0;
+            font-size: 18px;
+            transition: all 1.5s ease;
+        }
+
+        .line.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 25px;
+        }
+
+        .highlight {
+            color: #ffd1dc;
+            font-size: 20px;
+            text-shadow: 0 0 12px #ff9bb3;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="content">
+            <p class="line title">May the Fourth be with you ✨</p>
+            <p class="line">And may we always find each other,</p>
+            <p class="line">in every universe.</p>
+            <p class="line highlight">谢谢你陪我走到这，小毛就是我的整个宇宙呀 ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // 这里是你刚才的 JS
+        document.addEventListener("DOMContentLoaded", () => {
+            const lines = document.querySelectorAll(".line");
+            lines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.classList.add("show");
+                }, index * 2000); // 每2秒出一行
+            });
+        });
+    </script>
+</body>
 </html>
